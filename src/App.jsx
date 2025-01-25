@@ -30,11 +30,25 @@ function App() {
   ];
 
   const designSkills = [
-    "Adobe Illustrator",
-    "Adobe Photoshop",
-    "Adobe InDesign",
-    "Adobe Lightroom",
-    "Adobe Fresco"
+    {
+      name: "Adobe Illustrator",
+      icon: "src/Documents/illustrator_5611037.png", 
+    },
+    { name: "Adobe Photoshop",
+      icon: "src/Documents/photoshop-express_5968503.png",
+     },
+    { name: "Adobe InDesign",
+      icon: "src/Documents/indesign_5611049.png",
+     },
+    { name: "Adobe Lightroom",
+      icon: "src/Documents/photoshop-lightroom_5968514.png",
+     },
+    { name: "Adobe Fresco",
+      icon: "src/Documents/adobe-fresco_5968393.png",
+     },
+     { name: "Adobe Premier Pro",
+      icon: "src/Documents/premiere-pro_5968525.png",
+     },
   ];
 
   const softSkills = [
@@ -171,7 +185,7 @@ function App() {
         <div className="text-center max-w-3xl mx-auto">
           <div className="mb-8">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=300&q=80"
+              src="src/Documents/WhatsApp Image 2024-12-20 at 22.14.49_276ccfa7.jpg"
               alt="Lupin Sahu"
               className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
             />
@@ -183,20 +197,21 @@ function App() {
             Full Stack Developer | UI Designer | Photography Enthusiast
           </p>
           <div className="flex gap-4 justify-center mb-12">
-            <a href="https://github.com/Lupin1997" target="_blank" rel="noopener noreferrer" 
+            <a style={{color: "white"}}href="https://github.com/Lupin1997" target="_blank" rel="noopener noreferrer" 
                className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/lupin-sahu1997" target="_blank" rel="noopener noreferrer"
+            <a style={{color: "white"}}href="https://linkedin.com/in/lupin-sahu1997" target="_blank" rel="noopener noreferrer"
                className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:lupinsahu@gmail.com"
+            <a style={{color: "white"}}href="mailto:lupinsahu@gmail.com"
                className="p-2 bg-red-500 text-white rounded-full hover:bg-red-400 transition-colors">
               <Mail size={24} />
             </a>
           </div>
           <a
+          style={{color: "white"}}
             href="/src/Documents/Lupinsahu-resume.pdf"
             download
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition-colors"
@@ -274,7 +289,7 @@ function App() {
             </div>
           </div>
 
-          {/* Design Skills */}
+          {/* Design Skills
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-6">Design Skills</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -284,7 +299,22 @@ function App() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+  {designSkills.map((skill, index) => (
+    <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      {skill.icon && (
+        <img
+          src={skill.icon}
+          alt={skill.name}
+          className="w-12 h-12 mx-auto mb-2"
+          style={{ width: "40px", height: "40px" }} // Adjusted icon size
+        />
+      )}
+      <p className="text-center font-medium text-gray-800">{skill.name}</p>
+    </div>
+  ))}
+</div>
 
           {/* Soft Skills */}
           <div className="mb-12">
@@ -375,14 +405,14 @@ function App() {
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <a
+            <a style={{color: "white"}}
               href="mailto:lupinsahu@gmail.com"
               className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition-colors"
             >
               <Mail size={20} />
               lupinsahu@gmail.com
             </a>
-            <a
+            <a style={{color: "white"}}
               href="tel:+917828883548"
               className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition-colors"
             >
