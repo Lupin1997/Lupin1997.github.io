@@ -105,7 +105,7 @@ function App() {
   ];
 
 
-  
+
 
   return (
     <div className="h-screen w-screen bg-gray-50">
@@ -197,7 +197,7 @@ function App() {
             </a>
           </div>
           <a
-            href="/Lupin-Sahu-Resume.pdf"
+            href="/src/Documents/Lupinsahu-resume.pdf"
             download
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition-colors"
           >
